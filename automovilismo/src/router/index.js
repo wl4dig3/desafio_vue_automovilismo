@@ -21,12 +21,24 @@ const routes = [
     path: '/sobremi/:entrada',
     name: 'sobremi',
     alias: '/s',
-    component: () => import(/* webpackChunkName: "sobremi" */ '../views/Sobremi.vue')
+    component: () => import(/* webpackChunkName: "sobremi" */ '../views/Sobremi.vue'),
+    children: [
+        {
+            path: 'comentarios',
+            component: 'Comentarios',
+            name:'comentarios',
+           component: () => import(/* webpackChunkName: "comentarios" */ '../components/Comentarios.vue'),
+          }
+        ],
   },
   {
     path: '/contacto',
     name: 'contacto',
     component: () => import(/* webpackChunkName: "contacto" */ '../views/Contacto.vue')
+  },
+  {
+    path: '*',
+    component: () => import(/* webpackChunkName: "" */ '../views/NotFound.vue')
   }
 ]
 

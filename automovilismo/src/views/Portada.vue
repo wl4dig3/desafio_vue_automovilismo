@@ -1,7 +1,7 @@
 <template>
 <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+
+    <h1>This is Vue Framework Portada</h1>
 </div>
 </template>
 
@@ -16,3 +16,13 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.home {
+    background: blueviolet;
+    background-image: url("../assets/img/vue.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30rem;
+}
+</style>
